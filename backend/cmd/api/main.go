@@ -9,9 +9,12 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	_ = godotenv.Load()
 	mux := http.NewServeMux()
 
 	// Go 1.22+ supports method + path patterns directly in the standard router.
@@ -20,7 +23,8 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		slog.Error("PORT environment variable is required")
+		os.Exit(1)
 	}
 
 	srv := &http.Server{
