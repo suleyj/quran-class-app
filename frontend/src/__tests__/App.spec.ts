@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, afterEach } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 
 import App from '../App.vue'
@@ -7,6 +7,11 @@ import { fetchHealth } from '@/api/health'
 vi.mock('@/api/health')
 
 describe('App', () => {
+
+  afterEach(() => {
+    vi.resetAllMocks()
+  })
+
   it('shows healthy status when the API responds ok', async () => {
     vi.mocked(fetchHealth).mockResolvedValue({ status: 'ok', time: '2026-01-01T00:00:00Z' })
 
