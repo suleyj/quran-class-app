@@ -7,7 +7,6 @@ import { fetchHealth } from '@/api/health'
 vi.mock('@/api/health')
 
 describe('App', () => {
-
   afterEach(() => {
     vi.resetAllMocks()
   })
