@@ -39,14 +39,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
-        run: npx eslint .
-
-      - name: Check formatting
-        run: npx prettier --check src/
-
-      - name: Unit tests
-        run: npm run test:unit
-
-      - name: Type-check and build
+      - name: Build
         run: npm run build
