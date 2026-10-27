@@ -1,13 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+
+  css: ['~/assets/css/main.css'],
+  vite: { plugins: [tailwindcss()] },
 
   routeRules: {
     // Static/SEO pages: server-rendered (prerendered where possible)
     '/': { prerender: true },
     // Interactive pages: SPA, rendered in the browser only
     '/home': { ssr: false },
+    '/teacher': { ssr: false },
   },
 
   // Browser calls /api/*; in dev Nitro forwards to the Go API.

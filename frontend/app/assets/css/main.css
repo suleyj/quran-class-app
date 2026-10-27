@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "quranclass"; default: true; color-scheme: light;
+  --color-base-100: #ffffff; --color-base-200: #f4f7fb; --color-base-300: #e3eaf3; --color-base-content: #16233b;
+  --color-primary: #284880; --color-primary-content: #ffffff;
+  --color-secondary: #79a9d1; --color-secondary-content: #0f2340;
+  --color-accent: #f2b22a; --color-accent-content: #2b1d00;
+  --color-neutral: #16233b; --color-neutral-content: #ffffff;
+  --color-info: #2f6fae; --color-info-content: #ffffff;
+  --color-success: #25784f; --color-success-content: #ffffff;
+  --color-warning: #e9a21b; --color-warning-content: #2b1d00;
+  --color-error: #b8392f; --color-error-content: #ffffff;
+  --radius-selector: 2rem; --radius-field: 2rem; --radius-box: 1.25rem;
+  --size-selector: 0.25rem; --size-field: 0.275rem; --border: 1px; --depth: 0; --noise: 0;
+}
+
+/* Dark theme disabled: app is light mode only.
+@plugin "daisyui/theme" {
+  name: "quranclass-dark"; prefersdark: true; color-scheme: dark;
+  --color-base-100: #0e1828; --color-base-200: #152238; --color-base-300: #1f2f4a; --color-base-content: #e7edf6;
+  --color-primary: #8fb7e3; --color-primary-content: #0b1730;
+  --color-secondary: #5d8fbd; --color-secondary-content: #0b1730;
+  --color-accent: #f4bd45; --color-accent-content: #2b1d00;
+  --color-neutral: #dbe4f0; --color-neutral-content: #0e1828;
+  --color-info: #6aa7e0; --color-info-content: #0b1730;
+  --color-success: #5cc08c; --color-success-content: #06210f;
+  --color-warning: #f0b23a; --color-warning-content: #2b1d00;
+  --color-error: #f08a80; --color-error-content: #2a0705;
+  --radius-selector: 2rem; --radius-field: 2rem; --radius-box: 1.25rem;
+  --size-selector: 0.25rem; --size-field: 0.275rem; --border: 1px; --depth: 0; --noise: 0;
+}
+*/
